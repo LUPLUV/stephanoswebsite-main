@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans+SemiBold" rel="stylesheet" type="text/css"/>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" 
+      type="image/jpg" 
+      href="https://i1.sndcdn.com/avatars-33g4qp5DDA2XgGTD-YOygZQ-t500x500.jpg">
+    <title>GFSGameFriend</title>
+</head>
+<body>
+    <div class="container" id="cont">
+        <div class="op" id="op">
+        <i class='bx bxs-download image' onclick="window.open('downloads/', '_self')"></i>
+        <h1>Downloads</h1>
+        <div class="grid first-grid">
+            <div class="download" onclick="window.open('example-download/', '_self')">
+                Example Download
+            </div>
+            <div class="download" onclick="window.open('example-download/', '_self')">
+                Example Download
+            </div>
+        </div>
+        <div class="grid">
+            <div class="download" onclick="window.open('example-download/', '_self')">
+                Example Download
+            </div>
+            <div class="download" onclick="window.open('example-download/', '_self')">
+                Example Download
+            </div>
+        </div>
+        <div class="grid">
+            <div class="download" onclick="window.open('example-download/', '_self')">
+                Example Download
+            </div>
+            <div class="download" onclick="window.open('example-download/', '_self')">
+                Example Download
+            </div>
+        </div>
+        <div class="back" onclick="window.open('../', '_self')">
+            Back to Website
+        </div>
+        <div class="cp">
+            Copyright LUPLUV • All rights reserved • <span class="cp imprint" onclick="window.open('../imprint/', '_self')">Imprint</span>
+        </div>
+        </div>
+    </div>
+    <script>
+        var originUrl = document.referrer;
+        window.onload = function() {
+            if(originUrl.includes("downloads/")){
+                document.getElementById("cont").style.transition = "1.3s";
+                document.getElementById("cont").style.height = "500px";
+                document.getElementById("cont").style.width = "500px";
+                setTimeout(afterLoad, 1200);
+            }else{
+                document.getElementById("cont").style.transition = "0s";
+                document.getElementById("cont").style.height = "500px";
+                document.getElementById("cont").style.width = "500px";
+                afterLoad();
+            }
+        }
+        function afterLoad(){
+            document.getElementById("op").style.opacity = "1";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans+SemiBold" rel="stylesheet" type="text/css"/>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" 
+      type="image/jpg" 
+      href="https://i1.sndcdn.com/avatars-33g4qp5DDA2XgGTD-YOygZQ-t500x500.jpg">
+    <title>GFSGameFriend</title>
+</head>
+<body>
+    <div class="container" id="cont">
+        <div class="op" id="op">
+        <img class="logo" src="https://i1.sndcdn.com/avatars-33g4qp5DDA2XgGTD-YOygZQ-t500x500.jpg">
+        <h1>GFSGameFriend</h1>
+        <p>Hey Leute, ich bin Stefanos und mache Musik.<br>Wenn du Dubstep, Electro oder ähnliches<br>magst, checke meine Profile aus ;)</p>
+        <div class="grid">
+            <i class='bx bxl-youtube social' onclick="window.open('https://www.youtube.com/channel/UChsBfknFwJoUrS7uMrH0vqg?sub_confirmation=1', '_self')"></i>
+            <i class='bx bxl-soundcloud social' onclick="window.open('https://soundcloud.com/gfsgamefriend', '_self')"></i>
+            <i class='bx bxl-instagram-alt social' onclick="window.open('https://www.instagram.com/gfsgamefriend/', '_self')"></i>
+            <i class='bx bxl-twitter social' onclick="window.open('https://twitter.com/0_gfs2', '_self')"></i>
+            <i class='bx bxl-twitch social' onclick="window.open('https://www.twitch.tv/gfsgamefriend', '_self')"></i>
+            <i class='bx bxl-snapchat social' onclick="window.open('https://www.snapchat.com/add/gfs2.0', '_self')"></i>
+            <i class='bx bxs-download social' onclick="window.open('downloads/', '_self')"></i>
+        </div>
+        <div class="cp">
+            Copyright LUPLUV • All rights reserved • <span class="cp imprint" onclick="window.open('imprint/', '_self')">Imprint</span>
+        </div>
+        </div>
+    </div>
+    <script>
+        var originUrl = document.referrer;
+        window.onload = function() {
+            if(originUrl.includes("downloads/")){
+                document.getElementById("cont").style.transition = "0s";
+                document.getElementById("cont").style.margin = "15vh auto";
+                document.getElementById("cont").style.opacity = "1";
+                setTimeout(afterLoad1, 1);
+            }else{
+                document.getElementById("cont").style.margin = "15vh auto";
+                setTimeout(afterLoad2, 1);
+            }
+            
+        }
+        function afterLoad1(){
+            document.getElementById("op").style.transition = "1s";
+            document.getElementById("op").style.opacity = "1";
+        }
+        function afterLoad2(){
+            document.getElementById("cont").style.transition = "2s";
+            document.getElementById("cont").style.opacity = "1";
+            document.getElementById("op").style.transition = "2s";
+            document.getElementById("op").style.opacity = "1";
+        }
+    </script>
+</body>
+</html>
