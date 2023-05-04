@@ -28,6 +28,7 @@ body{
 .logo{
     height: 150px;
     margin-top: 40px;
+    border-radius: 100%;
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.2);
 }
 .social{
